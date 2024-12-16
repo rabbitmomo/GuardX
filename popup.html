@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Warning</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h2>Warning! Possible Phishing Website !!!!!</h2>
+    <div class="message-container">
+        <p id="url-label" class="url-title"><strong>URL:</strong></p>
+        <p id="url-value" class="highlight"></p>
+        <p id="probability-label"><strong>Phishing Probability:</strong></p>
+        <p id="probability-value" class="highlight"></p>
+        <p id="caution-text">Proceed with caution.</p>
+    </div>
+
+    <!-- Analysis Section -->
+    <div class="analysis-container" id="analysis-container">
+        <h3>Analysis</h3>
+        <!-- The analysis will be inserted here as individual divs -->
+    </div>
+
+    <div class="button-container">
+        <a href="#" id="proceed-link" class="proceed-link">
+            Proceed to the Detected Link
+        </a>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

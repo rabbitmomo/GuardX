@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Phishing Website Blocker",
+    "version": "1.2",
+    "description": "Blocks phishing websites using external API call.",
+    "permissions": [
+        "scripting",
+        "webNavigation",
+        "http://*/",
+        "https://*/"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "<all_urls>",
+        "https://phishing-detection-server-175f2c296ec7.herokuapp.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["model.onnx", "popup.html", "popup.css", "popup.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
